@@ -49,7 +49,8 @@ if st.button('Faire la prédiction'):
         prediction = response.json()
         st.write(f"Prédiction : {prediction['prediction']}")
     else:
-        st.error("Erreur lors de la prédiction.")
+    st.error(f"Erreur lors de la prédiction. Code: {response.status_code} - {response.text}")
+
 
 
 
