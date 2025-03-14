@@ -42,7 +42,7 @@ data = {
 # Appel à l'API de prédiction (via POST)
 if st.button('Faire la prédiction'):
     # Faire la requête à ton API FastAPI
-    url = "http://127.0.0.1:8000/predict/"
+    url = "https://cancerapi-hefkcfc4b0hwarb8.francecentral-01.azurewebsites.net/"
     response = requests.post(url, json=data)
     
     if response.status_code == 200:
