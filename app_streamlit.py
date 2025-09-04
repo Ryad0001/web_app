@@ -42,7 +42,7 @@ data = {
 # Appel à l'API de prédiction (via POST)
 if st.button('Faire la prédiction'):
     # Faire la requête à ton API FastAPI
-    url = "https://cancerapi-hefkcfc4b0hwarb8.francecentral-01.azurewebsites.net/predict/"
+    url = "https://mlsleep-api.onrender.com/predict/"
     response = requests.post(url, json=data)
     
     if response.status_code == 200:
@@ -50,6 +50,7 @@ if st.button('Faire la prédiction'):
         st.write(f"Prédiction : {prediction['prediction']}")
     else:
         st.error(f"Erreur lors de la prédiction. Code: {response.status_code} - {response.text}")
+
 
 
 
